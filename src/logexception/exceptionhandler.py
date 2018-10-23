@@ -1,4 +1,3 @@
-
 '''
 Create exceptions based on your inputs. Please follow the tasks below.
 
@@ -6,15 +5,7 @@ Create exceptions based on your inputs. Please follow the tasks below.
  - Create custom user-based exceptions
 '''
 
-
-class CustomInputError(Exception):
-    pass
-
-class ValueErrorException(CustomInputError):
-    pass
-
-class IOError(CustomInputError):
-    pass
-
-class TypeError(CustomInputError):
-    pass
+class ExceptionHandler(Exception):
+    def __init__(self, message):
+        super(ExceptionHandler, self).__init__(message)
+        self.message = message
